@@ -21,8 +21,8 @@ function App() {
       {user ? (
         <div className="user-info flex flex-col justify-center items-center">
           <img src={user.picture} alt={user.name} />
-          <p>Nombre: <span className='user-name '>{user.name}</span></p>
-          <p>E-mail: <span className='user-name'>{user.email}</span></p>
+          <p className='text-xl font-bold italic'>{user.name}</p>
+          <p className='text-lg'>{user.email}</p>
         </div>
       ) : (
         <GoogleLogin
