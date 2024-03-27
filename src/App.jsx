@@ -19,8 +19,8 @@ function App() {
   return (
     <>
       {user ? (
-        <div className="user-info flex flex-col justify-center items-center">
-          <img src={user.picture} alt={user.name} />
+        <div className=" flex flex-col justify-center items-center">
+          <img className='rounded-full size-[100px] mb-3 border-[4px] border-[#efaaaa] select-none' src={user.picture} alt={user.name} />
           <p className='text-xl font-bold italic'>{user.name}</p>
           <p className='text-lg'>{user.email}</p>
         </div>
