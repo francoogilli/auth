@@ -32,12 +32,14 @@ function App() {
   return (
     <>
       {user ? (
-        <div className="flex flex-col justify-center items-center">
+        <section className='flex flex-col justify-center items-center pt-[16.5rem]'>
+        <div className="flex flex-col justify-center items-center text-white">
           <img className='rounded-full size-[100px] mb-3 border-[4px] border-[#efaaaa] select-none' src={user.picture} alt={user.name} />
           <p className='text-xl font-bold italic'>{user.name}</p>
           <p className='text-lg'>{user.email}</p>
           <button className="text-white bg-gradient-to-r shadow-lg dark:shadow-blue-800/40 from-blue-500 via-blue-600 to-blue-700 border-none hover:bg-gradient-to-br rounded-xl font-medium text-sm px-5 py-2.5 text-center mt-4" onClick={handleLogout}>Cerrar sesión</button>
         </div>
+        </section>
       ) : (
         <GoogleLogin
           onSuccess={handleLoginSuccess}
